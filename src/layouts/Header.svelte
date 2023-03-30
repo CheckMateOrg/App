@@ -3,8 +3,10 @@
 
 <header>
   <nav>
-    <p>NSFS</p>
+    <p>CheckMate</p>
     <button>Sign In</button>
+    <button>Register</button>
+
   </nav>
 </header>
 

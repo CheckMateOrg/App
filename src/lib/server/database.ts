@@ -15,6 +15,7 @@ const DUMMY_PROFESSORS: Professor[] = [
 
 const DUMMY_REVIEWS: { [id: string]: Review } = {
   "1": {
+    course: "CSE134B",
     id: "1",
     date: "2022-12-19",
     score: 9,
@@ -22,6 +23,7 @@ const DUMMY_REVIEWS: { [id: string]: Review } = {
     message: "Good Professor",
   },
   "2": {
+    course: "CSE110",
     id: "2",
     date: "2022-12-18",
     score: 8,
@@ -29,6 +31,7 @@ const DUMMY_REVIEWS: { [id: string]: Review } = {
     message: "Good Professor",
   },
   "3": {
+    course: "CSE101",
     id: "3",
     date: "2022-12-16",
     score: 7,
@@ -36,6 +39,7 @@ const DUMMY_REVIEWS: { [id: string]: Review } = {
     message: "Good Professor",
   },
   "4": {
+    course: "CSE134B",
     id: "4",
     date: "2022-12-19",
     score: 9,
@@ -43,6 +47,7 @@ const DUMMY_REVIEWS: { [id: string]: Review } = {
     message: "Good Professor",
   },
   "5": {
+    course: "COGS108",
     id: "5",
     date: "2022-12-09",
     score: 3,

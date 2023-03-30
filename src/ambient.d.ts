@@ -6,6 +6,7 @@ type Professor = {
 };
 
 type Review = {
+  course: string;
   id: string;
   date: string;
   score: number;

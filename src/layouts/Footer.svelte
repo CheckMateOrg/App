@@ -1,5 +1,5 @@
 <script lang="ts"></script>
 
 <footer>
-  <small>© 2023 Not Safe For School. All rights reserved.</small>
+  <small>© 2023 Checkmate.com. All rights reserved.</small>
 </footer>
