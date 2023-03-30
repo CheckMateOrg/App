@@ -13,7 +13,45 @@ const DUMMY_PROFESSORS: Professor[] = [
   },
 ];
 
-export const getProfessorByQuery = async (
+const DUMMY_REVIEWS: { [id: string]: Review } = {
+  "1": {
+    id: "1",
+    date: "2022-12-19",
+    score: 9,
+    user_id: "1",
+    message: "Good Professor",
+  },
+  "2": {
+    id: "2",
+    date: "2022-12-18",
+    score: 8,
+    user_id: "1",
+    message: "Good Professor",
+  },
+  "3": {
+    id: "3",
+    date: "2022-12-16",
+    score: 7,
+    user_id: "1",
+    message: "Good Professor",
+  },
+  "4": {
+    id: "4",
+    date: "2022-12-19",
+    score: 9,
+    user_id: "1",
+    message: "Good Professor",
+  },
+  "5": {
+    id: "5",
+    date: "2022-12-09",
+    score: 3,
+    user_id: "1",
+    message: "Bad Professor",
+  },
+};
+
+export const getProfessorsByQuery = async (
   query: string
 ): Promise<Professor[]> => {
   return DUMMY_PROFESSORS;
@@ -21,4 +59,14 @@ export const getProfessorByQuery = async (
 
 export const getProfessorById = async (id: string): Promise<Professor> => {
   return DUMMY_PROFESSORS[0];
+};
+
+export const getReviewsByIds = async (ids: string[]) => {
+  let reviews: Review[] = [];
+
+  for (let id of ids) {
+    reviews.push(DUMMY_REVIEWS[id]);
+  }
+
+  return reviews;
 };
