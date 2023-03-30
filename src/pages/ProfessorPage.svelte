@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { getReviewsByIds } from "$lib/server/database";
   import Feedback from "../components/Feedback.svelte";
   import Layout from "../layouts/Layout.svelte";
 
