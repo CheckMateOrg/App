@@ -1,7 +1,7 @@
 import { error, json } from "@sveltejs/kit";
 import type { RequestHandler } from "./$types";
 
-import { getProfessorByQuery } from "$lib/server/database";
+import { getProfessorsByQuery } from "$lib/server/database";
 
 export const GET = (async ({ url }) => {
   const query = url.searchParams.get("query") ?? "";
@@ -10,5 +10,5 @@ export const GET = (async ({ url }) => {
     throw error(400, "Query can't be empty");
   }
 
-  return json({ data: await getProfessorByQuery(query) });
+  return json({ data: await getProfessorsByQuery(query) });
 }) satisfies RequestHandler;

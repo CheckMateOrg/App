@@ -1,17 +1,9 @@
 <script lang="ts">
   import Layout from "../layouts/Layout.svelte";
+  import useTimer from "$lib/ts/useTimer";
 
   let query = "";
   let professors: Professor[] = [];
-
-  const useTimer = (cb: Function, ms: number = 1000) => {
-    let timer: number | undefined;
-
-    return () => {
-      if (timer) clearTimeout(timer);
-      timer = setTimeout(cb, ms);
-    }
-  }
 
   const showSearchResult = useTimer(async () => {
     professors = query === "" ? [] : await getProfessors(query);
