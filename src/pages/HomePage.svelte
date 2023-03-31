@@ -54,6 +54,7 @@
 <style>
   h1 {
     margin: 2rem;
+    margin-top: 20%;
     text-align: center;
     font-size: 5rem;
     font-weight: normal;

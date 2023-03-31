@@ -9,11 +9,6 @@
 </li>
 
 <style>
-  a, a:visited {
-    color: inherit;
-    text-decoration: none;
-  }
-
   a {
     margin-top: 1rem;
     padding: 1rem;
@@ -21,6 +16,11 @@
     display: block;
     background-color: rgb(234, 234, 234);
     transition: all 0.5s ease;
+  }
+
+  a, a:visited {
+    color: inherit;
+    text-decoration: none;
   }
 
   a:hover {

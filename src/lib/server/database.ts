@@ -36,9 +36,10 @@ const DUMMY_REVIEWS: { [id: string]: Review } = {
     course: "CSE134B",
     id: "1",
     date: "2022-12-19",
-    score: 9,
+    score: 10,
     user_id: "1",
-    message: "Good Professor",
+    message:
+      "Good Professor asndfginsngrkwnr ajsndain inafniandfadfag adfad faaindfsdfadjfiniregininfandnfaidfarg",
   },
   "2": {
     course: "CSE110",
@@ -46,7 +47,8 @@ const DUMMY_REVIEWS: { [id: string]: Review } = {
     date: "2022-12-18",
     score: 8,
     user_id: "1",
-    message: "Good Professor",
+    message:
+      "Good Professor asndfginsngrkwnr ajsndain inafniandfadfag adfadfaaindfsdfadjfiniregininfandnfaidfarg",
   },
   "3": {
     course: "CSE101",
@@ -54,7 +56,8 @@ const DUMMY_REVIEWS: { [id: string]: Review } = {
     date: "2022-12-16",
     score: 7,
     user_id: "1",
-    message: "Good Professor",
+    message:
+      "Good Professor asndfginsngrkwnr ajsndain inafniandfadfag adfadfaaindfsdfadjfiniregininfandnfaidfarg",
   },
   "4": {
     course: "CSE134B",
@@ -70,7 +73,8 @@ const DUMMY_REVIEWS: { [id: string]: Review } = {
     date: "2022-12-09",
     score: 3,
     user_id: "1",
-    message: "Bad Professor",
+    message:
+      "Bad Professor asndfginsngrkwnr ajsndain inafniandfadfag adfad faaindfsdfadjfiniregininfandnfaidfarg",
   },
 };
 
