@@ -1,5 +1,13 @@
 <script lang="ts"></script>
 
-<footer>
-  <small>© 2023 Checkmate.com. All rights reserved.</small>
+<footer class="middle">
+  <small>All rights reserved © 2023 checkmate.com</small>
 </footer>
+
+<style>
+  footer {
+    margin-top: auto;
+    margin-bottom: 4rem;
+    text-align: center;
+  }
+</style>

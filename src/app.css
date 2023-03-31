@@ -1,16 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
 :root {
-    --main: #35393E;
-    --secondary: #9370F7;
-    --action: #FFFFFF;
+	--main-color: #35393E;
+	--secondary-color: #FFFFFF;
+	--action-color: #9370F7;
 }
 
 * {
 	font-family: "Ubuntu";
 }
 
+body {
+	min-height: 100vh;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	color: var(--secondary-color);
+	background-color: var(--main-color);
+}
+
 .middle {
 	width: 75%;
 	max-width: 70rem;
-	margin: auto;
+	margin: 0 auto;
 }

@@ -1,4 +1,6 @@
 <script lang="ts">
+  import "../app.css";
+
   import Layout from "../layouts/Layout.svelte";
   import useTimer from "$lib/ts/useTimer";
   import SearchReult from "../components/SearchReult.svelte";
