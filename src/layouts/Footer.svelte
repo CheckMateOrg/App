@@ -6,8 +6,8 @@
 
 <style>
   footer {
-    margin-top: auto;
-    margin-bottom: 4rem;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 </style>

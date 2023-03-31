@@ -11,6 +11,18 @@ const DUMMY_PROFESSORS: Professor[] = [
     school_id: "123",
     review_ids: ["7", "8", "9", "10", "11"],
   },
+  {
+    id: "12347",
+    name: "Dave",
+    school_id: "123",
+    review_ids: ["11", "12", "13", "14", "15"],
+  },
+  {
+    id: "12348",
+    name: "Davin",
+    school_id: "123",
+    review_ids: ["21", "22", "23", "24", "25"],
+  },
 ];
 
 const DUMMY_REVIEWS: { [id: string]: Review } = {
@@ -59,7 +71,15 @@ const DUMMY_REVIEWS: { [id: string]: Review } = {
 export const getProfessorsByQuery = async (
   query: string
 ): Promise<Professor[]> => {
-  return DUMMY_PROFESSORS;
+  let professors: Professor[] = [];
+
+  for (let prof of DUMMY_PROFESSORS) {
+    if (prof.name.toLowerCase().startsWith(query.toLowerCase())) {
+      professors.push(prof);
+    }
+  }
+
+  return professors;
 };
 
 export const getProfessorById = async (id: string): Promise<Professor> => {

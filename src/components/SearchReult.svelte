@@ -1,18 +1,21 @@
 <script lang='ts'>
-    export let professor: Professor;
+  import { slide } from 'svelte/transition';
+
+  export let professor: Professor;
 </script>
 
-<link rel="stylesheet" href="/src/app.css">
-<li>
-    <a href="/professors/{professor.id}">{professor.name}</a>
+<li transition:slide|local>
+  <a href="/professors/{professor.id}">{professor.name}</a>
 </li>
 
-
 <style>
-    
-    li {
-        background-color: var(--action);
-    }
-
-    
+  a, a:visited {
+    color: inherit;
+    text-decoration: none;
+  }
+  li {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
 </style>
