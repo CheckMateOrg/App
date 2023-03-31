@@ -21,7 +21,7 @@
 
 <Layout>
   <h1>{professor.name}</h1>
-  <div id="add-review">+</div>
+  <button>+</button>
   {#await promise then reviews}
     {#each reviews as review}
       <Feedback {review} />
