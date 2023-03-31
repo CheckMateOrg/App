@@ -5,7 +5,7 @@
   export let professor: Professor;
 
   const getReviews = async (ids: string[]): Promise<Review[]> => {
-    const url = `/api/reviews?id=${ids}`;
+    const url = `/api/reviews?ids=${ids}`;
     const options = {
       headers: {
         "Content-Type": "application/json",
@@ -16,13 +16,13 @@
     return json.data;
   };
 
-  let reviews = getReviews(professor.review_ids);
+  let promise = getReviews(professor.review_ids);
 </script>
 
 <Layout>
   <h1>{professor.name}</h1>
   <div id="add-review">+</div>
-  {#await reviews then reviews}
+  {#await promise then reviews}
     {#each reviews as review}
       <Feedback {review} />
     {/each}
