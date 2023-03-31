@@ -9,6 +9,7 @@
 
   let query = "";
   let professors: Professor[] = [];
+  $: showSearchReult = professors.length !== 0;
 
   const showSearchResult = useTimer(async () => {
     professors = query === "" ? [] : await getProfessors(query);
@@ -38,10 +39,10 @@
       placeholder="Enter here..."
       bind:value={query}
       on:input={showSearchResult}
-      class="{professors.length === 0 ? '' : 'expanded'}"
+      class="{showSearchReult ? 'expanded': ''}"
     />
   </form>
-  {#if professors.length !== 0}
+  {#if showSearchReult}
     <ul transition:slide>
       {#each professors as prof}
         <SearchReult professor={prof} />
@@ -51,7 +52,6 @@
 </Layout>
 
 <style>
-
   h1 {
     margin: 2rem;
     text-align: center;
@@ -74,7 +74,7 @@
     z-index: 10;
   }
 
-  input:hover, input.expanded {
+  input:hover {
     cursor: pointer;
   }
 
@@ -86,12 +86,11 @@
     --overlap: 3rem;
     width: 40rem;
     margin: 0 auto;
-    padding: calc(2rem + var(--overlap)) 2rem 2rem 2rem;
+    padding: var(--overlap) 1.25rem 1.25rem 1.25rem;
     border-radius: 1.5rem;
     color: var(--main-color);
     background-color: var(--secondary-color);
     transform: translateY(calc(-1 * var(--overlap)));
-    transition: height 0.5s ease;
     z-index: 0;
   }
 </style>

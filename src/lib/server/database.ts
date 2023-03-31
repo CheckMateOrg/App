@@ -23,6 +23,12 @@ const DUMMY_PROFESSORS: Professor[] = [
     school_id: "123",
     review_ids: ["21", "22", "23", "24", "25"],
   },
+  {
+    id: "12349",
+    name: "李曉明",
+    school_id: "123",
+    review_ids: ["31", "32", "33", "34", "35"],
+  },
 ];
 
 const DUMMY_REVIEWS: { [id: string]: Review } = {
