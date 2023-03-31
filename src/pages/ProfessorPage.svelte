@@ -1,4 +1,5 @@
 <script lang="ts">
+  import '../app.css'
   import Feedback from "../components/Feedback.svelte";
   import Layout from "../layouts/Layout.svelte";
 
@@ -28,3 +29,4 @@
     {/each}
   {/await}
 </Layout>
+
