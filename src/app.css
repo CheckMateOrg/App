@@ -1,7 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
 :root {
     --main: #35393E;
     --secondary: #9370F7;
     --action: #FFFFFF;
 }
 
+* {
+	font-family: "Ubuntu";
+}
 
+.middle {
+	width: 75%;
+	max-width: 70rem;
+	margin: auto;
+}
