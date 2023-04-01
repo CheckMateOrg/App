@@ -1,0 +1,25 @@
+:root {
+	--main-color: #35393E;
+	--secondary-color: #FFFFFF;
+	--action-color: #9370F7;
+}
+
+* {
+	box-sizing: border-box;
+	font-family: "Ubuntu";
+}
+
+body {
+	min-height: 100vh;
+	margin: 0;
+	display: grid;
+	grid-template-rows: 10% auto 10%;
+	color: var(--secondary-color);
+	background-color: var(--main-color);
+}
+
+.middle {
+	width: 75%;
+	max-width: 70rem;
+	margin: 0 auto;
+}

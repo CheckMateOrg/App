@@ -11,6 +11,24 @@ const DUMMY_PROFESSORS: Professor[] = [
     school_id: "123",
     review_ids: ["7", "8", "9", "10", "11"],
   },
+  {
+    id: "12347",
+    name: "Dave",
+    school_id: "123",
+    review_ids: ["11", "12", "13", "14", "15"],
+  },
+  {
+    id: "12348",
+    name: "Davin",
+    school_id: "123",
+    review_ids: ["21", "22", "23", "24", "25"],
+  },
+  {
+    id: "12349",
+    name: "李曉明",
+    school_id: "123",
+    review_ids: ["31", "32", "33", "34", "35"],
+  },
 ];
 
 const DUMMY_REVIEWS: { [id: string]: Review } = {
@@ -18,9 +36,10 @@ const DUMMY_REVIEWS: { [id: string]: Review } = {
     course: "CSE134B",
     id: "1",
     date: "2022-12-19",
-    score: 9,
+    score: 10,
     user_id: "1",
-    message: "Good Professor",
+    message:
+      "Good Professor asndfginsngrkwnr ajsndain inafniandfadfag adfad faaindfsdfadjfiniregininfandnfaidfarg",
   },
   "2": {
     course: "CSE110",
@@ -28,7 +47,8 @@ const DUMMY_REVIEWS: { [id: string]: Review } = {
     date: "2022-12-18",
     score: 8,
     user_id: "1",
-    message: "Good Professor",
+    message:
+      "Good Professor asndfginsngrkwnr ajsndain inafniandfadfag adfadfaaindfsdfadjfiniregininfandnfaidfarg",
   },
   "3": {
     course: "CSE101",
@@ -36,7 +56,8 @@ const DUMMY_REVIEWS: { [id: string]: Review } = {
     date: "2022-12-16",
     score: 7,
     user_id: "1",
-    message: "Good Professor",
+    message:
+      "Good Professor asndfginsngrkwnr ajsndain inafniandfadfag adfadfaaindfsdfadjfiniregininfandnfaidfarg",
   },
   "4": {
     course: "CSE134B",
@@ -52,14 +73,23 @@ const DUMMY_REVIEWS: { [id: string]: Review } = {
     date: "2022-12-09",
     score: 3,
     user_id: "1",
-    message: "Bad Professor",
+    message:
+      "Bad Professor asndfginsngrkwnr ajsndain inafniandfadfag adfad faaindfsdfadjfiniregininfandnfaidfarg",
   },
 };
 
 export const getProfessorsByQuery = async (
   query: string
 ): Promise<Professor[]> => {
-  return DUMMY_PROFESSORS;
+  let professors: Professor[] = [];
+
+  for (let prof of DUMMY_PROFESSORS) {
+    if (prof.name.toLowerCase().startsWith(query.toLowerCase())) {
+      professors.push(prof);
+    }
+  }
+
+  return professors;
 };
 
 export const getProfessorById = async (id: string): Promise<Professor> => {

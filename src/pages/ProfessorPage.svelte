@@ -1,5 +1,8 @@
 <script lang="ts">
-  import Feedback from "../components/Feedback.svelte";
+  import "../app.css";
+
+  // use ReviewView so it won't conflict with the type
+  import ReviewView from "../components/Review.svelte";
   import Layout from "../layouts/Layout.svelte";
 
   export let professor: Professor;
@@ -21,10 +24,50 @@
 
 <Layout>
   <h1>{professor.name}</h1>
+  <!-- <p>@ {professor.school_id}</p> -->
+  <p>@ UCSD</p>
   <button>+</button>
-  {#await promise then reviews}
-    {#each reviews as review}
-      <Feedback {review} />
-    {/each}
-  {/await}
+  <div class="reviews">
+    {#await promise then reviews}
+      {#each reviews as review}
+        <ReviewView {review} />
+      {/each}
+    {/await}
+  </div>
 </Layout>
+
+<style>
+  h1 {
+    margin: 0;
+    margin-top: 2rem;
+    font-size: 4rem;
+    font-weight: normal;
+  }
+
+  p {
+    margin: 0;
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  button {
+    width: 100%;
+    margin: 3rem 0;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 16px;
+    font-size: 2rem;
+    color: var(--secondary-color);
+    background-color: var(--action-color);
+  }
+
+  button:hover {
+    cursor: pointer;
+  }
+
+  .reviews {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+</style>
