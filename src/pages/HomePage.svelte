@@ -5,7 +5,7 @@
 
   import useTimer from "$lib/ts/useTimer";
   import Layout from "../layouts/Layout.svelte";
-  import SearchReult from "../components/SearchReult.svelte";
+  import SearchResult from "../components/SearchResult.svelte";
 
   let query = "";
   let professors: Professor[] = [];
@@ -45,7 +45,7 @@
   {#if showSearchReult}
     <ul transition:slide>
       {#each professors as prof}
-        <SearchReult professor={prof} />
+        <SearchResult professor={prof} />
       {/each}
     </ul>
   {/if}

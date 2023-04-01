@@ -1,7 +1,8 @@
 <script lang="ts">
   import "../app.css";
 
-  import Feedback from "../components/Feedback.svelte";
+  // use ReviewView so it won't conflict with the type
+  import ReviewView from "../components/Review.svelte";
   import Layout from "../layouts/Layout.svelte";
 
   export let professor: Professor;
@@ -29,7 +30,7 @@
   <div class="reviews">
     {#await promise then reviews}
       {#each reviews as review}
-        <Feedback {review} />
+        <ReviewView {review} />
       {/each}
     {/await}
   </div>
