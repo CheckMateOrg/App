@@ -1,8 +1,6 @@
 <script lang="ts">
   import Upvote from "./icons/Upvote.svelte";
   import Downvote from "./icons/Downvote.svelte";
-  import UpvoteOutline from "./icons/UpvoteOutline.svelte";
-  import DownvoteOutline from "./icons/DownvoteOutline.svelte";
 
   export let score = 0;
 
@@ -30,21 +28,23 @@
 </script>
 
 <div class="votes">
-  {#if status === "upvote"}
-    <Upvote color={action_color} on:click={toggleUpvote} />
-  {:else}
-    <UpvoteOutline on:click={toggleUpvote} />
-  {/if}
+  <Upvote
+    on:click={toggleUpvote}
+    border_color={status === "upvote" ? action_color : "black"}
+    inner_color={status === "upvote" ? action_color : "white"}
+    arrow_color={status === "upvote" ? "white" : "black"}
+  />
 
   <span class={status === "neutral" ? "" : "voted"}
     >{score + status_score_map[status]}</span
   >
 
-  {#if status === "downvote"}
-    <Downvote color={action_color} on:click={toggleDownvote} />
-  {:else}
-    <DownvoteOutline on:click={toggleDownvote} />
-  {/if}
+  <Downvote
+    on:click={toggleDownvote}
+    border_color={status === "downvote" ? action_color : "black"}
+    inner_color={status === "downvote" ? action_color : "white"}
+    arrow_color={status === "downvote" ? "white" : "black"}
+  />
 </div>
 
 <style>
