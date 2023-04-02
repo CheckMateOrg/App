@@ -29,7 +29,7 @@
   <button>+</button>
   <div class="reviews">
     {#await promise then reviews}
-      {#each reviews as review}
+      {#each reviews as review (review.id)}
         <ReviewView {review} />
       {/each}
     {/await}
