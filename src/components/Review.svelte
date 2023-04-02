@@ -1,4 +1,6 @@
 <script lang="ts">
+  import Votes from "./Votes.svelte";
+
     export let review: Review;
 </script>
 
@@ -8,6 +10,7 @@
     <h2>{review.course}</h2>
     <p>{review.message}</p>
   </div>
+  <Votes />
   <p class="date">{review.date} </p>
 </div>
 
